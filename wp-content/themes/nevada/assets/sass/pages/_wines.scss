@@ -1,0 +1,13 @@
+.our-wines {
+    text-align: center;
+    padding-top: 90px;
+
+    @include max-w($screen-lg) {
+        padding-top: 50px;
+    }
+
+    @include max-w(420px) {
+        padding-top: 25px;
+    }
+}
+

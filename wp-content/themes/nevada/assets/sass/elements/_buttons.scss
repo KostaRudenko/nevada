@@ -1,5 +1,4 @@
-// Кнопки
-
+// Buttons
 .btn {
   display: inline-block;
   vertical-align: middle;
@@ -7,8 +6,47 @@
   outline: 0 none;
   border: 0 none;
   border-radius: 0;
-  padding: 8px 25px;
-  background-color: #000;
   text-transform: uppercase;
-  color: #fff;
+  cursor: pointer;
+  color: $secondary-color;
+  position: relative;
+  padding-right: 45px;
+  @include fluid-font (15px, 15px, 320px, 2560px);
+
+  @include max-w($screen-md) {
+    padding-right: 30px;
+  }
+
+  &--arr-left {
+    padding-right: 0;
+    padding-left: 45px;
+
+    @include max-w($screen-md) {
+      padding-left: 30px;
+    }
+  }
+
+  &--calendar {
+    display: none;
+    padding-left: 15px;
+
+    @include max-w($screen-md) {
+      display: block;
+      margin-left: 7px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0;
+    bottom: 1px;
+    
+    &--left {
+      right: 90%;
+    }
+  }
+
+  &:hover {
+    color: $text-color;
+  }
 }

@@ -1,8 +1,7 @@
-//  Базовые стили
-
+//  Base styles
 html {
   box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 *,
@@ -12,12 +11,16 @@ html {
 }
 
 body {
-	background-color: $body-bg;
+  background-color: $body-bg;
   color: $text-color;
-	font-family: $font-family;
+  font-family: $font-family;
   font-weight: $font-weight;
-	font-size: $font-size;
-	line-height: $line-height;
+  // font-size: $font-size;
+  line-height: $line-height;
+
+  overflow-x: hidden;
+  
+  @include fluid-font (14px, 20px, 320px, 2560px);
 }
 
 a {
@@ -50,4 +53,113 @@ section {
 
 .icon {
   display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+figure {
+  margin: 30px;
+}
+
+// Section title indent
+.section-title-indent {
+  text-align: center;
+  
+  &--bottom {
+    margin-bottom: 50px;
+
+    @include max-w(420px) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+// border styling
+.border {
+  position: relative;
+  overflow-x: hidden;
+
+  &--top {
+    border-top: 2px solid $tertiary-color;
+  }
+
+  &--bottom {
+    border-bottom: 2px solid $tertiary-color;
+  }
+
+  &--top-pseudo {
+
+    &:after {
+      content: '';
+        width: 98%;
+        height: 1px;
+        background: $tertiary-color;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        top: 3px;
+      }
+  }
+
+  &--bottom-pseudo {
+  
+    &:before {
+      content: '';
+        width: 98%;
+        height: 1px;
+        background: $tertiary-color;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        bottom: 3px;
+      }
+  }
+}
+
+// styling separator
+.separator {
+  position: relative;
+
+  &--right {
+
+    &:after {
+      content: '';
+      width: 1px;
+      height: 100%;
+      background: $tertiary-color;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &--bottom {
+    
+    &:before {
+      content: '';
+      width: 97%;
+      height: 1px;
+      background: $tertiary-color;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%); 
+      bottom: 0;
+    }
+  }
+}
+
+.hide {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }

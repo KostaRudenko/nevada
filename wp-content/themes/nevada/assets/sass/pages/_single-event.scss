@@ -1,0 +1,33 @@
+.single-event {
+    p {
+        overflow: initial;
+        height: auto;
+
+        @include max-w(420px) {
+            line-height: 24px;
+        }
+    }
+
+    .photo-container {
+        text-align: center;
+        font-family: $font-family--GaramondPremrPro;
+        font-style: italic;
+        margin-bottom: 15px;
+
+        @include max-w($screen-md) {
+            margin: 15px 0;
+        }
+
+        p {
+            font-size: 16px;
+            padding-top: 10px;
+        }
+    }
+
+    &__photo-wrap {
+        max-width: 560px;
+        max-height: 235px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+}

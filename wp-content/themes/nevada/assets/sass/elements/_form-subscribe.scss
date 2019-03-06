@@ -1,0 +1,44 @@
+.subscribe-form-wrapper {
+    padding: 100px 0;
+
+    @include max-w($screen-md) {
+        padding: 100px 20px;
+    }
+
+    @include max-w(420px) {
+         padding: 50px 0;
+    }
+
+    .subscribe-form {
+        display: flex;
+        max-width: 645px;
+        max-height: 60px;
+        position: relative;
+        padding: 0 10px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        &__input-wrap {
+            display: flex;
+            width: 100%;
+        }
+
+        &__input {
+            padding-right: 10px;
+        }
+
+        .btn {
+            padding: 20px 55px;
+
+            @include max-w(420px) {
+                padding: 20px 15px;
+            }
+
+            &__icon {
+                bottom: 20px;
+            }
+        }
+    }
+}
+
+

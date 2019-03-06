@@ -7,12 +7,25 @@
 @import 'typography';
 @import 'sprite';
 
-@import 'wp-classes';
-
 @import 'elements/form-elements';
 @import 'elements/buttons';
+@import 'elements/navigation';
+@import 'elements/card-wrapper';
+@import 'elements/insta-photo-list';
+@import 'elements/form-subscribe';
+@import 'elements/banner-wrapper';
+@import 'elements/social-list';
+@import 'elements/bottle-card';
+@import 'elements/publicated-article';
+@import 'elements/form-contact-us';
 
 @import 'block/header';
 @import 'block/footer';
+@import 'block/contact';
 
 @import 'pages/home';
+@import 'pages/wines';
+@import 'pages/events';
+@import 'pages/media';
+@import 'pages/single-event';
+@import 'pages/contact';

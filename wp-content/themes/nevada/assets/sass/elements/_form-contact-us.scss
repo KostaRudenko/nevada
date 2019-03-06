@@ -1,0 +1,44 @@
+.contact-us-form {
+    text-align: right;
+    padding-bottom: 25px;
+    width: 100%;
+    color: $input-secondary;
+    font-size: $font-family--GaramondPremrPro;
+
+    &__field {
+        background: none;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid $input-secondary!important;
+        resize: none;
+        
+        &:focus {
+          outline: none;
+          border-bottom: 1px solid $text-color!important;
+        }
+    }
+
+    &__item {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    &__label {
+        font-size: 20px;
+        font-family: $font-family--GaramondPremrPro;
+        color: $input-secondary;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: .3s ease all;
+
+        &--top {
+            top: -14px;
+            font-size: 14px;
+            color: $input-secondary; 
+        }
+    }
+}

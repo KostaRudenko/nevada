@@ -1,0 +1,92 @@
+.public-article {
+    padding: 30px 10px 45px;
+    
+    &--single-event {
+        padding-bottom: 5px;
+    }
+
+    p {
+        margin-top: -6px;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        height: 60px;
+        overflow: hidden;
+
+        &--respons {
+
+            @include max-w($screen-md) {
+                clear: both;
+                padding-top: 20px;
+                height: 115px;
+            }
+        }
+    }
+
+    &__event-date {
+        width: 75px;
+        height: 75px;
+        background: $secondary-color;
+        color: $primary-color;
+        float: left;
+        margin: 0;
+        margin-right: 15px;
+        padding-top: 18px;
+        text-align: center;
+        @include fluid-font (18px, 20px, 320px, 2560px);
+
+        @include max-w($screen-md) {
+            width: 60px;
+            height: 60px;
+            padding-top: 7px;
+        }
+    }
+
+    &__footer {
+        text-align: right;
+        padding-top: 20px;
+
+        &--resp {
+
+            @include max-w($screen-md) {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        &--to-event-position {
+            display: flex;
+        }
+    }
+
+    &__photo-wrap {
+        overflow: hidden;
+        height: 220px;
+        margin-bottom: 30px;
+
+        @include max-w($screen-md) {
+            text-align: center;
+        }
+
+        @include max-w(420px) {
+            max-height: 220px;
+            height: 100%;
+       }
+
+        .nevada-liquore {
+            margin-top: -50px;
+            margin-left: 0;
+        }
+    }
+    
+    &__post-date {
+        font-size: 16px;
+        font-family: $font-family--GaramondPremrPro;
+        color: $tertiary-color;
+    }
+}

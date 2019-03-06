@@ -1,54 +1,81 @@
-//  Подключения шрифтов
+//  Include fonts
 
-// font-family: 'Roboto';
+// font-family: 'GaramondPremrPro'
 @font-face {
-  font-family: 'Roboto';
-  font-weight: normal;
-  src:  local('Roboto'), local('Roboto-Regular');
-  src:  url('../fonts/Roboto-Regular.eot');
-  src:  url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Roboto-Regular.woff2') format('woff2'),
-        url('../fonts/Roboto-Regular.woff') format('woff'),
-        url('../fonts/Roboto-Regular.ttf') format('truetype'),
-        url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+  font-family: "GaramondPremrPro";
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+  src: url("../fonts/GaramondPremrPro.eot");
+  src: url("../fonts/GaramondPremrPro.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/GaramondPremrPro.svg") format("svg"),
+    url("../fonts/GaramondPremrPro.ttf") format("truetype"),
+    url("../fonts/GaramondPremrPro.woff") format("woff"), 
+    url("../fonts/GaramondPremrPro.woff2") format("woff2");
 }
 
-// font-family: 'Roboto';
-// font-weight: 700;
+// font-faily: 'GaramondPremrPro'
+// font-style: italic
 @font-face {
-  font-family: 'Roboto';
-  font-weight: 700;
-  src:  local('Roboto'), local('Roboto-Bold');
-  src:  url('../fonts/Roboto-Bold.eot');
-  src:  url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/Roboto-Bold.woff2') format('woff2'),
-        url('../fonts/Roboto-Bold.woff') format('woff'),
-        url('../fonts/Roboto-Bold.ttf') format('truetype'),
-        url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+  font-family: "GaramondPremrPro";
+  font-weight: 400;
+  font-style: italic;
+  font-display: fallback;
+  src: url("../fonts/GaramondPremrPro-It.eot");
+  src: url("../fonts/GaramondPremrPro-It.eot?#iefix") format("embedded-opentype"), 
+    url("../fonts/GaramondPremrPro-It.svg") format("svg"),
+    url("../fonts/GaramondPremrPro-It.ttf") format("truetype"), 
+    url("../fonts/GaramondPremrPro-It.woff") format("woff"), 
+    url("../fonts/GaramondPremrPro-It.woff2") format("woff2"); 
 }
 
-// Заголовки
-
-h1, h2, h3, h4, h5 {
-  font-family: $font-family;
+// font-faily: 'GaramondPremrPro'
+// font-weight: 600
+@font-face {
+  font-family: "GaramondPremrPro-Smbd";
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+  src: url("./fonts/GaramondPremrPro-Smbd.eot");
+  src: url("./fonts/GaramondPremrPro-Smbd.eot?#iefix") format("embedded-opentype"), 
+    url("./fonts/GaramondPremrPro-Smbd.svg") format("svg"),
+    url("./fonts/GaramondPremrPro-Smbd.ttf") format("truetype"),
+    url("./fonts/GaramondPremrPro-Smbd.woff") format("woff"), 
+    url("./fonts/GaramondPremrPro-Smbd.woff2") format("woff2");
 }
 
-h1 {
-  font-size: 42px;
+// font-family: 'Oswald'
+@font-face {
+  font-family: "Oswald-Regular";
+  font-weight: 400;
+  font-display: fallback;
+  src: url("../fonts/Oswald-Regular.eot"); 
+  src: url("../fonts/Oswald-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Oswald-Regular.svg") format("svg"), 
+    url("../fonts/Oswald-Regular.ttf") format("truetype"),
+    url("../fonts/Oswald-Regular.woff") format("woff"),
+    url("../fonts/Oswald-Regular.woff2") format("woff2");
 }
 
-h2 {
-	font-size: 36px;
+//paragraphs
+p {
+  font-family: $font-family--GaramondPremrPro;
+  color: $paragraph-color;
+  line-height: $paragraph-line-height;
 }
 
-h3 {
-	font-size: 28px;
+p, h3 {
+  //font-size: $paragraphs-font-size;
+  @include fluid-font (14px, 20px, 320px, 2560px);
 }
 
 h4 {
-  font-size: 18px;
+  // font-size: $font-size--h4;
+  @include fluid-font (14px, 20px, 320px, 2560px);
+  margin: 15px 0;
 }
-
-h5 {
-  font-size: 16px;
+// Main title style
+h1, h2, h3, h4, h5 {
+  font-family: $font-family;
+  text-transform: uppercase;
 }

@@ -1,0 +1,61 @@
+.contacts-wrapper {
+    padding-top: 100px;
+
+    @include max-w($screen-md) {
+        padding: 50px 20px;
+    }
+
+    @include max-w(420px) {
+         padding: 50px 0;
+    }
+    
+    .contacts {
+        display: flex;
+        text-align: center;
+        position: relative;
+        min-height: 128px;
+        padding: 0 10px;
+        
+        @include max-w(685px) {
+            flex-direction: column;
+        }
+
+        &__text, &__email {
+            font-family: $font-family--GaramondPremrPro;
+            font-style: italic;
+        }
+
+        &__title {
+            padding-bottom: 14px;
+            margin: 0;
+        }
+
+        &__email {
+            color: $tertiary-color;
+        }
+
+        &__title, &__text, &__email {
+            @include fluid-font (16px, 16px, 320px, 2560px);
+            color: $text-color;
+        }
+
+        &__item {
+            position: relative;
+            padding: 30px 16px;
+            width: 33%;
+
+            @include max-w(685px) {
+                padding: 20px 16px;
+                width: 100%;
+            }
+
+            @include max-w(420px) {
+                padding: 20px 0;
+            }
+
+            &:nth-child(2) {
+                flex-basis: 42%;
+            }
+        }
+    }
+}
