@@ -1,6 +1,6 @@
 (function($) {
   // Code...
-  $(document).ready(function () {
+
 
     //subscribe form input on focus border-color change 
     $('.subscribe-form__input').on('focus', function () {
@@ -12,10 +12,10 @@
     });
 
     //masonry media page
-    // var $grid = $('.masonry-block').imagesLoaded(function () {
-    //     // init Masonry after all images have loaded
-    //     $grid.masonry();
-    // });
+    var $grid = $('.masonry-block').imagesLoaded(function () {
+        // init Masonry after all images have loaded
+        $grid.masonry();
+    });
 
     //Contact Form
     //label on focus
@@ -34,8 +34,7 @@
     //burger menu
     $('.burger-menu').on('click', function () {
         $(this).toggleClass('open');
-        // $('body, html').toggleClass('hide');
-        $('body').toggleClass('hide');
+        $('body, html').toggleClass('hide');
 
         if ($('.burger-menu').hasClass('open')) {
             $('.main-nav__list').toggleClass('responsive');
@@ -50,9 +49,9 @@
         
         // closing burger when landscape mode switched
         if (viewportWidth > 769) {
-            $('body').removeClass('hide');
+            $('body, html').removeClass('hide');
             $('.burger-menu').removeClass('open');
-            $('.navigation').removeClass('responsive');
+            $('.main-nav__list').removeClass('responsive');
         } 
 
         //styling contats block
@@ -72,7 +71,7 @@
             $('.bottle-card__photo-wrapper').addClass('separator--right');
         }
 
-    });
+ 
 });
 
     // init google map

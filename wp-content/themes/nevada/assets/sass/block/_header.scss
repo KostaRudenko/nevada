@@ -1,4 +1,4 @@
-.page-header {
+.navigation-wrap {
   position: absolute;
   width: 100%;
   display: flex;
@@ -35,8 +35,7 @@
       position: absolute;
       height: 4px;
       width: 100%;
-      // background: $primary-color;
-      background: black;
+      background: $primary-color;
       border-radius: 9px;
       opacity: 1;
       left: 0;

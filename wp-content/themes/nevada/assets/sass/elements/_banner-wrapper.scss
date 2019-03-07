@@ -3,7 +3,6 @@
 
     &--home {
         min-height: 720px;
-        background: url('../../images/header-main-bg.jpg') no-repeat;
         background-position-x: center;
         background-size: cover;
 
@@ -14,10 +13,6 @@
         @include max-w(420px) {
              min-height: 200px;
         }
-
-        @include max-w(320px) {
-            background: url('../../images/bg-main-sm.jpg') no-repeat;
-       }
     }
 
     &--meet-us {
@@ -28,7 +23,6 @@
 
     &--wine {
         min-height: 370px;
-        background: url('../../images/wine-bg.jpg') no-repeat;
         background-position: center 25%;
 
         @include max-w($screen-md) {
@@ -38,11 +32,7 @@
         @include max-w(420px) {
             min-height: 200px;
         }
-
-        @include max-w(320px) {
-            background: url('../../images/bg-wine-sm.jpg') no-repeat;
-       }
-
+        
         &:before {
             content: '';
             position: absolute;

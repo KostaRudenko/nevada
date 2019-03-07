@@ -4,7 +4,11 @@
  */
 ?>
 
-<?php get_header(); ?>
+<?php 
+    if(is_page('wines')) {
+        get_header('wines');
+    }
+?>
 
 
 

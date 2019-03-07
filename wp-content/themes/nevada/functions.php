@@ -81,10 +81,40 @@ function theme_scripts() {
 	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/assets/css/normalize.css' );
 	wp_enqueue_style( 'theme-main-style', get_template_directory_uri() . '/assets/dist/main.css' );
 	wp_enqueue_style( 'theme-custom-style', get_template_directory_uri() . '/assets/css/custom.css' );
-  // Scripts
+  	// Scripts
+	wp_enqueue_script( 'font-awesome-script', get_template_directory_uri() . '/assets/scripts/all.min.js', array('jquery'), false, true );
+	wp_enqueue_script( 'imageload-script', get_template_directory_uri() . '/assets/scripts/imagesloaded.pkgd.min.js', array('jquery'), false, true );
+	wp_enqueue_script( 'masonry-script', get_template_directory_uri() . '/assets/scripts/masonry.pkgd.min.js', array('jquery'), false, true );
 	wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/assets/scripts/main.js', array('jquery'), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
+
+/**
+ * Option Page
+ */
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Header Settings',
+		'menu_title'	=> 'Header',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Footer Settings',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+}
 
 
 /**
