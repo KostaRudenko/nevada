@@ -47,7 +47,6 @@
 
     &--media {
         min-height: 370px;
-        background: url('../../images/media-bg.jpg') no-repeat;
         background-position: center top;
 
         @include max-w($screen-md) {

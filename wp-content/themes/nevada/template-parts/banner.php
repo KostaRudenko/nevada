@@ -1,5 +1,15 @@
 <div class="banner-wrapper">
-            <div class="banner-wrapper <?php echo is_front_page() ? 'banner-wrapper--home' : 'banner-wrapper--wine' ?>"
+            <div class="banner-wrapper 
+                <?php if (is_page('home')) {
+                    echo 'banner-wrapper--home';
+                } elseif (is_page('wines')) {
+                    echo 'banner-wrapper--wine';
+                } elseif (is_page('media')) {
+                    echo 'banner-wrapper--media';
+                } elseif (is_page('contact')) {
+                    echo 'banner-wrapper--contact';
+                }
+                ?>"
             
 				<?php
 					$banner_image = get_field('banner_image');
