@@ -4,12 +4,8 @@
  */
 ?>
 
-<?php 
-    if(is_page('wines')) {
-        get_header('wines');
-    }
-?>
+<?php get_header(); ?>
 
-
+<?php echo is_front_page() ? 'banner-wrapper--home' : false ?>
 
 <?php get_footer(); ?>
