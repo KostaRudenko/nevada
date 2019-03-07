@@ -8,6 +8,8 @@
                     echo 'banner-wrapper--media';
                 } elseif (is_page('contact')) {
                     echo 'banner-wrapper--contact';
+                } elseif (is_page('events')) {
+                    echo 'banner-wrapper--events';
                 }
                 ?>"
             
