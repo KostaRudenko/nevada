@@ -14,6 +14,7 @@
 
                 <h2><?php echo $story_title; ?></h2>
                 <p><?php echo $main_text; ?></p>
+                
         </div>
     
 
