@@ -1,19 +1,16 @@
 	<footer class="page-footer" role="contentinfo">
 
 		<div class="page-footer__inner">
-
-			<?php 
-				$logo_footer = get_field('logo-footer', 'option');
-				$text_footer = get_field('footer_text', 'option');
-			?>
-
+		
 			<?php
+				$logo_footer = get_field('logo-footer', 'option');
+
 				if ($logo_footer) : ?>
-					<img src="<?php echo $logo_footer; ?>" alt="NevadaSunset-logo">
+					<img src="<?php echo $logo_footer['url']; ?>" alt="<?php echo $logo_footer['alt'] ?>" />
 				<?php endif;
 			?>
 			
-    		<p class="copyright"><?php echo $text_footer; ?></p>
+    		<p class="copyright"><?php echo the_field('footer_text', 'option'); ?></p>
 		</div>
 
 	</footer>
