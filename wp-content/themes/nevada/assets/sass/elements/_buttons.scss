@@ -11,6 +11,7 @@
   color: $secondary-color;
   position: relative;
   padding-right: 45px;
+  font-family: inherit;
   @include fluid-font (15px, 15px, 320px, 2560px);
 
   @include max-w($screen-md) {
