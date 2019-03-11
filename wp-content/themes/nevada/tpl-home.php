@@ -28,10 +28,25 @@
                         </ul>
                 <?php endif; ?>
 
+                <div class='meet-us' 
+                        <?php
+                                $bg_image = get_field('meet_us_bg');
+
+                                if ($bg_image) : ?>
+                                        style="background-image: url(<?php echo $bg_image; ?>)"
+                                <?php endif;
+                        ?>
+                >
+                        <div class="card-wrapper">
+                                <div class="card-wrapper__content">
+                                        <h3><?php the_field('meet_us_title'); ?></h3>
+                                        <p><?php the_field('meet_us_text'); ?></p>
+                                </div>
+                        </div>
+                </div>
+
                 <?php get_template_part( 'template-parts/contacts-info' ); ?>
                 
         </div>
     
-
-
 <?php get_footer(); ?>
