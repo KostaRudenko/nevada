@@ -6,14 +6,30 @@
 
 <?php get_header(); ?>
         
-        <div>
-                <?php 
-                    $story_title = get_field('field_label');
-                    $main_text = get_field('some_here');
-                ?>
+        <div class='page-container'>
+                <div class='our-story'>
+                        <?php while ( have_posts() ) : the_post(); ?>
+                                <?php the_title('<h3', '</h3>'); ?>
+                                <?php the_content(); ?>
+                        <?php endwhile; ?>
+                </div>
 
-                <h2><?php echo $story_title; ?></h2>
-                <p><?php echo $main_text; ?></p>
+                <?php if( have_rows('insta_photos') ): ?>
+
+                        <ul class="insta-photo-list">
+
+                                <?php while( have_rows('insta_photos') ): the_row(); 
+                                
+                                        $image = get_sub_field('image');
+                                ?>
+
+                                        <li class="insta-photo-list__item">
+                                                <img class='insta-photo-list__image' src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                                        </li>
+                                <?php endwhile; ?>
+                        </ul>
+
+                <?php endif; ?>
                 
         </div>
     

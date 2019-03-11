@@ -36,10 +36,6 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        @include max-w($screen-lg) {
-            max-width: inherit;
-        }
-
         @include max-w(768px) {
             max-width: 100%;
         }

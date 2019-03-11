@@ -1,18 +1,26 @@
 <div class="banner-wrapper">
     <div class="banner-wrapper 
-        <?php if (is_page('home')) {
-            	echo 'banner-wrapper--home';
-            } elseif (is_page('wines')) {
-                echo 'banner-wrapper--wine';
-            } elseif (is_page('media')) {
-                echo 'banner-wrapper--media';
-            } elseif (is_page('contact')) {
-                echo 'banner-wrapper--contact';
-            } elseif (is_page('events')) {
-                echo 'banner-wrapper--events';
-            }
+		<?php switch ($post->post_name) {
+    			case 'home':
+        			echo 'banner-wrapper--home';
+					break;
+				case 'wines':
+					echo 'banner-wrapper--wine';
+					break;
+				case 'media':
+					echo 'banner-wrapper--media';
+					break;
+				case 'contact':
+					echo 'banner-wrapper--contact';
+					break;
+				case 'events':
+					echo 'banner-wrapper--events';
+					break;
+				default:
+					break;
+			};
         ?>"
-            
+
 		<?php
 			$banner_image = get_field('banner_image');
 

@@ -10,7 +10,7 @@
 				<?php endif;
 			?>
 			
-    		<p class="copyright"><?php echo the_field('footer_text', 'option'); ?></p>
+    		<p class="copyright"><?php the_field('footer_text', 'option'); ?></p>
 		</div>
 
 	</footer>
