@@ -15,9 +15,7 @@
                 </div>
 
                 <?php if( have_rows('insta_photos') ): ?>
-
                         <ul class="insta-photo-list">
-
                                 <?php while( have_rows('insta_photos') ): the_row(); 
                                 
                                         $image = get_sub_field('image');
@@ -28,8 +26,9 @@
                                         </li>
                                 <?php endwhile; ?>
                         </ul>
-
                 <?php endif; ?>
+
+                <?php get_template_part( 'template-parts/contacts-info' ); ?>
                 
         </div>
     
