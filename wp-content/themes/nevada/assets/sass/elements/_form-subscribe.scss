@@ -8,23 +8,31 @@
     @include max-w(420px) {
          padding: 50px 0;
     }
-
-    .subscribe-form {
-        display: flex;
+    .wpcf7-form {
         max-width: 645px;
-        max-height: 60px;
         position: relative;
         padding: 0 10px;
         margin: 0 auto;
-        overflow: hidden;
+    }
+    .subscribe-form-content {
+        display: flex;
+        overflow: inherit;
+        padding: 0 10px;
 
         &__input-wrap {
             display: flex;
             width: 100%;
         }
+        
+        &__btn-wrap {
+            display: flex;
+            position: relative;
 
-        &__input {
-            padding-right: 10px;
+            .ajax-loader {
+                position: absolute;
+                top: 22px;
+                left: 21px;
+            }
         }
 
         .btn {
@@ -37,7 +45,37 @@
             &__icon {
                 bottom: 20px;
             }
-        }
+        } 
+    }
+
+    .wpcf7-validation-errors {
+        display: none!important;
+    }
+
+    .wpcf7-not-valid-tip {
+        position: absolute;
+        font-family: $font-family--GaramondPremrPro;
+        font-size: 18px;
+        top: 65px;
+    }
+
+    .subscribe-email {
+        padding-right: 10px;
+        display: flex;
+        width: 100%;
+        padding-right: 10px;
+    }
+
+    div.wpcf7-mail-sent-ok {
+        position: absolute;
+        margin: 0;
+        top: 67px;
+        left: 20px;
+        padding: 0;
+        border: none;
+        color: $success-color;
+        font-family: $font-family--GaramondPremrPro;
+        font-size: 18px;
     }
 }
 

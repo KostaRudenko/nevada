@@ -1,13 +1,12 @@
 (function($) {
   // Code...
 
-
     //subscribe form input on focus border-color change 
-    $('.subscribe-form__input').on('focus', function () {
+    $('.wpcf7-form-control').on('focus', function () {
         $(this).parents().css('border-color', '#781241');
     });
     //subscribe form input on blur border-color set default
-    $('.subscribe-form__input').on('blur', function () {
+    $('.wpcf7-form-control').on('blur', function () {
         $(this).parents().css('border-color', 'inherit');
     });
 
@@ -69,10 +68,21 @@
             $('.bottle-card').removeClass('border--bottom');
         } else {
             $('.bottle-card__photo-wrapper').addClass('separator--right');
+        } 
+    });
+
+    //border color on invalid subscribe email form
+    $('.wpcf7-submit').on('click', function () {
+        let inputVal = $('.wpcf7-email').val();
+
+        if (inputVal === '') {
+            $(this).parents().css('border-color', '#f00');
         }
 
- 
-});
+        if ($('span').hasClass('wpcf7-not-valid-tip')) {
+            $(this).parents().css('border-color', '#f00')
+        }
+    })
 
     // init google map
     function initMap() {

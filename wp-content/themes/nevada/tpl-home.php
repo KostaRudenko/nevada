@@ -29,21 +29,8 @@
                 <?php endif; ?>
                 
                 <div class='subscribe-form-wrapper'>
-                        <?php echo do_shortcode ('[contact-form-7 id="161" title="Email Subscribe form"]'); ?>
+                        <?php echo do_shortcode ('[contact-form-7 id="169" title="Email Subscribe form"]'); ?> 
                 </div>
-               
-                
-                <!-- <div class="subscribe-form-wrapper">
-			<form class="subscribe-form border border--top border--bottom border--top-pseudo border--bottom-pseudo"
-				action="">
-				<div class="subscribe-form__input-wrap separator separator--right">
-					<input class="subscribe-form__input" type="email" placeholder="Enter your e-mail" required>
-				</div>
-				<div class="subscribe-form__btn-wrap">
-					<button class="btn" type="submit">Subscribe <span class="btn__icon"><i class="fas fa-angle-right"></i></span></button>
-				</div>
-			</form>
-		</div> -->
 
                 <div class='meet-us' 
                         <?php
