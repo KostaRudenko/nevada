@@ -2,11 +2,11 @@
   // Code...
 
     //subscribe form input on focus border-color change 
-    $('.wpcf7-form-control').on('focus', function () {
+    $('.wpcf7-email').on('focus', function () {
         $(this).parents().css('border-color', '#781241');
     });
     //subscribe form input on blur border-color set default
-    $('.wpcf7-form-control').on('blur', function () {
+    $('.wpcf7-email').on('blur', function () {
         $(this).parents().css('border-color', 'inherit');
     });
 
@@ -71,18 +71,17 @@
         } 
     });
 
-    //border color on invalid subscribe email form
-    $('.wpcf7-submit').on('click', function () {
-        let inputVal = $('.wpcf7-email').val();
+    $(".wpcf7").on('wpcf7:invalid', function() {
+        // Your code here
+        $('.subscribe-form-content').css('border-color', '#f00');
+      });
 
-        if (inputVal === '') {
-            $(this).parents().css('border-color', '#f00');
-        }
+      $(".wpcf7").on('wpcf7:mailsent', function() {
+        // Your code here
+        $('.subscribe-form-content').css('border-color', '#398f14');
+      });
 
-        if ($('span').hasClass('wpcf7-not-valid-tip')) {
-            $(this).parents().css('border-color', '#f00')
-        }
-    })
+    
 
     // init google map
     function initMap() {
