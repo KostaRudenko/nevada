@@ -62,7 +62,7 @@
                                 </footer>
 
                             </article>
-                            
+
                         </div>
 
                     <?php endwhile; ?>
