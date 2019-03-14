@@ -1,5 +1,4 @@
 (function($) {
-  // Code...
 
     //subscribe form input on focus border-color change 
     $('.wpcf7-email').on('focus', function () {
@@ -20,7 +19,7 @@
     //label on focus
     $('.contact-us-form__field').on('focus', function () {
         $(this).parent().find('.contact-us-form__label').addClass('contact-us-form__label--top');
-    })
+    });
     //label on blur
     $('.contact-us-form__field').on('blur', function () {
         let inputval = $(this).val();
@@ -71,26 +70,14 @@
         } 
     });
 
+    //validation subscribe form invalid
     $(".wpcf7").on('wpcf7:invalid', function() {
-        // Your code here
         $('.subscribe-form-content').css('border-color', '#f00');
-      });
-
-      $(".wpcf7").on('wpcf7:mailsent', function() {
-        // Your code here
+    });
+    //validation subscribe form success
+    $(".wpcf7").on('wpcf7:mailsent', function() {
         $('.subscribe-form-content').css('border-color', '#398f14');
-      });
-
+    });
     
-
-    // init google map
-    function initMap() {
-        // The location of Uluru
-        var uluru = { lat: 49.4240073, lng: 32.0652071 };
-        // The map, centered at Uluru
-        var map = new google.maps.Map(document.getElementById('map'), { zoom: 10, center: uluru });
-        // The marker, positioned at Uluru
-        var marker = new google.maps.Marker({ position: uluru, map: map });
-    }
-
 })(jQuery);
+

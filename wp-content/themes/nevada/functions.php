@@ -86,6 +86,7 @@ function theme_scripts() {
 	wp_enqueue_script( 'imageload-script', get_template_directory_uri() . '/assets/scripts/imagesloaded.pkgd.min.js', array('jquery'), false, true );
 	wp_enqueue_script( 'masonry-script', get_template_directory_uri() . '/assets/scripts/masonry.pkgd.min.js', array('jquery'), false, true );
 	wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/assets/scripts/main.js', array('jquery'), false, true );
+	
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 

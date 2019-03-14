@@ -1,8 +1,8 @@
 <div class="banner-wrapper">
     <div class="banner-wrapper 
 		<?php switch ($post->post_name) {
-    			case 'home':
-        			echo 'banner-wrapper--home';
+    		case 'home':
+        	echo 'banner-wrapper--home';
 					break;
 				case 'wines':
 					echo 'banner-wrapper--wine';
@@ -25,7 +25,9 @@
 			$banner_image = get_field('banner_image');
 
 			if ($banner_image) : ?>
+
 				style="background-image: url(<?php echo $banner_image; ?>)"
+				
 			<?php endif;
 		?>
 			>

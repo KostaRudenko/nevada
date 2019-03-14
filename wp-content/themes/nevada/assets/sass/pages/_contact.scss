@@ -1,31 +1,27 @@
 .contact {
     padding-top: 100px;
 
-    @include max-w($screen-lg) {
-        padding-top: 50px;
-    }
-
-    @include max-w(420px) {
-        padding-top: 25px;
-    }
-
-    .section-title-indent + p {
+    &__title-wrap {
         text-align: center;
-        padding: 0 180px;
 
-        @include max-w($screen-lg) {
+        p {
+            text-align: center;
             padding: 0 200px;
     
             @include max-w($screen-lg) {
-                padding: 0 100px;
-            }
-    
-            @include max-w(650px) {
-                padding: 0 50px;
-            }
-    
-            @include max-w($screen-sm) {
-                padding: 0;
+                padding: 0 200px;
+        
+                @include max-w($screen-lg) {
+                    padding: 0 100px;
+                }
+        
+                @include max-w(650px) {
+                    padding: 0 50px;
+                }
+        
+                @include max-w($screen-sm) {
+                    padding: 0;
+                }
             }
         }
     }
@@ -54,7 +50,7 @@
             right: 100px;
         }
 
-        @include max-w($screen-md) {
+        @include max-w(865px) {
             display: flex; 
             justify-content: center;
             padding-bottom: 50px;
@@ -63,5 +59,13 @@
             right: inherit;
             top: inherit;
         }
+    }
+
+    @include max-w($screen-lg) {
+        padding-top: 50px;
+    }
+
+    @include max-w(420px) {
+        padding-top: 25px;
     }
 }
