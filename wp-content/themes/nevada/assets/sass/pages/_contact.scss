@@ -68,4 +68,10 @@
     @include max-w(420px) {
         padding-top: 25px;
     }
+
+    .contact-us {
+        position: relative;
+        min-height: 725px;
+        background-position-x: center;
+    }
 }

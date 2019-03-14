@@ -1,11 +1,11 @@
 (function($) {
 
     //subscribe form input on focus border-color change 
-    $('.wpcf7-email').on('focus', function () {
+    $('.subscribe-email').on('focus', function () {
         $(this).parents().css('border-color', '#781241');
     });
     //subscribe form input on blur border-color set default
-    $('.wpcf7-email').on('blur', function () {
+    $('.subscribe-email').on('blur', function () {
         $(this).parents().css('border-color', 'inherit');
     });
 
@@ -18,14 +18,14 @@
     //Contact Form
     //label on focus
     $('.contact-us-form__field').on('focus', function () {
-        $(this).parent().find('.contact-us-form__label').addClass('contact-us-form__label--top');
+        $(this).parent().parent().find('.contact-us-form__label').addClass('contact-us-form__label--top');
     });
     //label on blur
     $('.contact-us-form__field').on('blur', function () {
         let inputval = $(this).val();
         
         if (inputval === '') {
-            $(this).parent().find('.contact-us-form__label').removeClass('contact-us-form__label--top');
+            $(this).parent().parent().find('.contact-us-form__label').removeClass('contact-us-form__label--top');
         }
     });
 
@@ -77,6 +77,14 @@
     //validation subscribe form success
     $(".wpcf7").on('wpcf7:mailsent', function() {
         $('.subscribe-form-content').css('border-color', '#398f14');
+
+        if ($('.contact-us-form__field')) {
+            let inputval = $(this).val();
+            
+            if (inputval === '') {
+                $(this).parents().find('.contact-us-form__label').removeClass('contact-us-form__label--top');
+            }
+        }     
     });
     
 })(jQuery);

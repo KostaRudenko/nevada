@@ -1,4 +1,7 @@
 <?php get_header(); ?>
+<?php get_template_part( 'template-parts/content-events' )?>
+
+	<main id="main" class="page-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -16,4 +19,7 @@
 
 		<?php endif; ?>
 
+	</main>
+
 <?php get_footer(); ?>
+
