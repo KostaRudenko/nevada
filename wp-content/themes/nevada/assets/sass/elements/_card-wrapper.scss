@@ -16,7 +16,14 @@
         top: 0;
         transform: inherit;
         width: 265px;
-        height: 160px;
+
+        p {
+            line-height: 24px;
+        }
+
+        .card-wrapper__content {
+            padding: 20px;
+        }
 
         @include max-w($screen-md) {
             width: 300px;

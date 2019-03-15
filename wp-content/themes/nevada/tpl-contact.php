@@ -25,19 +25,29 @@
                 <div class="working-hours">
                     <div class="card-wrapper card-wrapper--woking-hours">
                         <div class="card-wrapper__content">
-                            <h3 class="card-wrapper__title">working hours</h3>
-                            <div class="card-wrapper__work-hours">
-                                <p class="card-wrapper__work-day">Thursday:</p>
-                                <p>4 PM - 9 PM</p>
-                            </div>
-                            <div class="card-wrapper__work-hours">
-                                <p class="card-wrapper__work-day">Friday:</p>
-                                <p>4 PM - 9 PM</p>
-                            </div>
-                            <div class="card-wrapper__work-hours">
-                                <p class="card-wrapper__work-day">Saturday:</p>
-                                <p>4 PM - 9 PM</p>
-                            </div>                           
+                            <h3 class="card-wrapper__title"><?php the_field('working_title'); ?></h3>
+
+                            <?php if( have_rows('working') ): ?>
+
+                                <?php while( have_rows('working') ): the_row(); 
+
+                                    // vars
+                                    $work_day = get_sub_field('working_day');
+                                    $work_hours = get_sub_field('working_hours');
+            
+                                    ?>
+
+                                    <div class="card-wrapper__work-hours">
+                                        <p class="card-wrapper__work-day"><?php echo $work_day; ?></p>
+                                        <p><?php echo $work_hours; ?></p>
+                                    </div> 
+
+                                <?php endwhile; ?>
+
+                                </ul>
+
+                            <?php endif; ?>
+
                         </div>
                     </div>
                 </div>
