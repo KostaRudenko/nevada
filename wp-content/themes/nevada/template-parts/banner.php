@@ -13,15 +13,13 @@
 				case 'contact':
 					echo 'banner-wrapper--contact';
 					break;
-				case 'events':
-					echo 'banner-wrapper--events';
-					break;
 				default:
 					break;
 			};
         ?>"
 
 		<?php
+					
 			$banner_image = get_field('banner_image');
 
 			if ($banner_image) : ?>

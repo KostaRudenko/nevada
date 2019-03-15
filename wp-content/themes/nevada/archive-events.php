@@ -1,25 +1,39 @@
 <?php get_header(); ?>
-<?php get_template_part( 'template-parts/content-events' )?>
+<div class="page-container">
+        <section class="events">
+                <h3 class="section-title-indent section-title-indent--bottom">events</h3>
+                <div class="events__content-wrap">
+                    <div class="events__event-wrap">
+					<?php if ( have_posts() ) : ?>
 
-	<main id="main" class="page-main" role="main">
+						<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php if ( have_posts() ) : ?>
+							<?php get_template_part( 'template-parts/content', 'events' ); ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+						<?php endwhile; ?>
 
-				<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+							<?php the_posts_navigation(); ?>
 
-			<?php endwhile; ?>
+						<?php else : ?>
 
-			<?php the_posts_navigation(); ?>
+							<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		<?php else : ?>
+					<?php endif; ?>	
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+                    </div>
+                    
 
-		<?php endif; ?>
+                    <div class="events__calendar border border--top border--top-pseudo">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque omnis quod molestias nobis corporis commodi accusantium iusto repellendus in sed, nesciunt, dolores unde voluptas, amet vero dolorem exercitationem recusandae aut?
+                        </p>
+                    </div>
+                </div>
+        </section>
 
-	</main>
-
+		<?php get_template_part( 'template-parts/contacts-info' ); ?>
+		
+    </div>
 <?php get_footer(); ?>
+
 

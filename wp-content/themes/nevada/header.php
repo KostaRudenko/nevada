@@ -19,7 +19,15 @@
 			</button>
 		</div>
 
-		<?php get_template_part( 'template-parts/banner' ); ?>
+		
+		<?php 
+			if (is_archive('events')) {
+			 	get_template_part( 'template-parts/banner-events' );
+			} else {
+				get_template_part( 'template-parts/banner' );
+			}
+		?>
+		
 
 		<div class="card-wrapper card-wrapper--respons <?php echo is_front_page() ? null : 'card-wrapper--mar-top' ?>">
 			<div class="card-wrapper__content">
