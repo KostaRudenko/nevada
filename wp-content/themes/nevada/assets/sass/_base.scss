@@ -85,7 +85,7 @@ figure {
 // border styling
 .border {
   position: relative;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   &--top {
     border-top: 2px solid $tertiary-color;

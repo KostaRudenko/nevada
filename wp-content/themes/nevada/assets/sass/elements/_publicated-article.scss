@@ -3,6 +3,7 @@
     
     &--single-event {
         padding-bottom: 5px;
+        overflow: hidden;
     }
 
     p {
@@ -77,11 +78,6 @@
             max-height: 220px;
             height: 100%;
        }
-
-        .nevada-liquore {
-            margin-top: -50px;
-            margin-left: 0;
-        }
     }
     
     &__post-date {

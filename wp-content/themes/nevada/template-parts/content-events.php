@@ -1,11 +1,15 @@
-					
+	
 <article class="public-article border border--top border--top-pseudo" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<h3 class="public-article__event-date"><?php echo get_the_date('M j Y')?></h3> 
+	<h3 class="public-article__event-date">
+		<?php echo get_the_date('M j Y')?>
+	</h3> 
 
 	<?php the_title( '<h3 class="public-article__title">', '</h3>' ); ?>
 
-	<p class="public-article__text public-article__text--respons"><?php echo get_the_excerpt(); ?></p>
+	<p class="public-article__text public-article__text--respons">
+		<?php echo get_the_excerpt(); ?>
+	</p>
 	
 	<footer class="public-article__footer public-article__footer--resp">
 
@@ -33,7 +37,7 @@
 				$event_btn_icon = get_sub_field('icon', 'option');
 				
 				?>
- 				<a href="./single-event.html" class="btn"><span class="btn__icon"><i class="<?php echo $event_btn_icon; ?>"></i></span><?php echo $event_btn_title; ?></a>
+ 				<a href="<?php echo get_the_permalink(); ?>" class="btn"><span class="btn__icon"><i class="<?php echo $event_btn_icon; ?>"></i></span><?php echo $event_btn_title; ?></a>
 			<?php endwhile; ?>
 
 		<?php endif; ?>

@@ -19,15 +19,29 @@
 			</button>
 		</div>
 
-		
+		<!-- single event menu bottom line -->
+		<?php if ( is_single() ) : ?>
+			<style>
+				.menu-item-261:after {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 1px;
+					background: #fff;
+					bottom: -5px;
+					left: 0;
+				}
+			</style>
+		<?php endif?>
+
+
 		<?php 
-			if (is_archive('events')) {
+			if ( is_archive() || is_single() ) {
 			 	get_template_part( 'template-parts/banner-events' );
 			} else {
 				get_template_part( 'template-parts/banner' );
-			}
-		?>
-		
+			} 
+		?> 
 
 		<div class="card-wrapper card-wrapper--respons <?php echo is_front_page() ? null : 'card-wrapper--mar-top' ?>">
 			<div class="card-wrapper__content">
