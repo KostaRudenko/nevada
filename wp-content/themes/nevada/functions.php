@@ -133,3 +133,4 @@ require get_template_directory() . '/include/customizer.php';
  * Create custom post types.
  */
 require get_template_directory() . '/include/custom-post-type.php';
+

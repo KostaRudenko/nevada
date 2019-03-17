@@ -16,16 +16,15 @@
                 </div>
     
                 <div class="events__calendar border border--top border--top-pseudo">
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque omnis quod molestias nobis corporis
-                        commodi accusantium iusto repellendus in sed, nesciunt, dolores unde voluptas, amet vero dolorem
-                        exercitationem recusandae aut?
-                    </p>
-                </div>
+
+					<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+						<?php dynamic_sidebar( 'sidebar-1' ); ?>
+					<?php endif; ?>
+				</div>
+				
             </div>
 		</section>
 		
-		<?php get_template_part( 'template-parts/contacts-info' ); ?>
 
     </div>
 

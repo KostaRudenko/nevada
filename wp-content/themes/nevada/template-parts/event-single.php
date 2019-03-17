@@ -6,7 +6,7 @@
             <?php the_content(); ?>
         </p>
     </div>
-    
+
     <footer class="public-article__footer public-article__footer--resp public-article__footer--to-event-position">
 
         <?php if( have_rows('single_event_btn', 'option') ): 
@@ -17,7 +17,12 @@
                 $single_btn_icon = get_sub_field('icon', 'option');
                 
                 ?>
-                <a href="<?php echo get_post_type_archive_link('events'); ?>" class="btn btn--arr-left"><span class="btn__icon btn__icon--left"><i class="<?php echo $single_btn_icon; ?>"></i></span><?php echo $single_btn_title; ?></a>
+                <a href="<?php echo get_post_type_archive_link('events'); ?>" class="btn btn--arr-left">
+                    <span class="btn__icon btn__icon--left">
+                        <i class="<?php echo $single_btn_icon; ?>"></i>
+                    </span>
+                    <?php echo $single_btn_title; ?>
+                </a>
             <?php endwhile; ?>
 
         <?php endif; ?>
