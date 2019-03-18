@@ -9,7 +9,7 @@
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
-						<?php get_template_part( 'template-parts/event', 'single'); ?>
+						<?php get_template_part( 'template-parts/content-event', 'single'); ?>
 
 					<?php endwhile; ?>
 
@@ -23,7 +23,7 @@
 				</div>
 				
             </div>
-			
+
 		</section>
 		
     </div>
