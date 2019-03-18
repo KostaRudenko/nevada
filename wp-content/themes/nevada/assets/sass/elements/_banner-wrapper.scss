@@ -15,6 +15,10 @@
         }
     }
 
+    &--404 {
+        min-height: 370px;
+    }
+
     &--wine {
         min-height: 370px;
         background-position: center 25%;
@@ -65,7 +69,6 @@
 
     &--events {
         min-height: 370px;
-        background: url('../../images/events-bg.jpg') no-repeat;
         background-position: center top;
 
         @include max-w($screen-md) {
@@ -75,10 +78,6 @@
         @include max-w(420px) {
              min-height: 200px;
         }
-
-        @include max-w(320px) {
-            background: url('../../images/bg-events-sm.jpg') no-repeat;
-       }
 
         &:before {
             content: '';
@@ -94,7 +93,6 @@
 
     &--contact {
         min-height: 370px;
-        background: url('../../images/contact-bg.jpg') no-repeat;
         background-position: center top;
 
         @include max-w($screen-md) {
@@ -104,10 +102,6 @@
         @include max-w(420px) {
             min-height: 200px; 
         }
-
-        @include max-w(320px) {
-            background: url('../../images/bg-contact-sm.jpg') no-repeat;
-       }
 
         &:before {
             content: '';

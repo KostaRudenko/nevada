@@ -34,11 +34,13 @@
 			</style>
 		<?php endif?>
 
-
 		<?php 
 			if ( is_archive() || is_single() ) {
 			 	get_template_part( 'template-parts/banner-events' );
-			} else {
+			} elseif ( is_404()) {
+				get_template_part( 'template-parts/banner-404' );
+			}
+			 else {
 				get_template_part( 'template-parts/banner' );
 			} 
 		?> 

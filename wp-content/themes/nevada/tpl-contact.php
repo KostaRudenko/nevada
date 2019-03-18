@@ -57,7 +57,7 @@
             
                 <?php
 
-                    $contact_bg = get_field('get_in');
+                    $contact_bg = get_field('bg');
 
                     if ($contact_bg) :?>
                          style="background-image: url(<?php echo $contact_bg; ?>)"
