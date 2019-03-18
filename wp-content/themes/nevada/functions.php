@@ -120,6 +120,12 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Events',
 		'parent_slug'	=> 'theme-general-settings',
 	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Contacts Settings',
+		'menu_title'	=> 'Contacts Info',
+		'parent_slug'	=> 'theme-general-settings',
+	));
 	
 }
 

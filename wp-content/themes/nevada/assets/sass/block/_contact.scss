@@ -15,6 +15,7 @@
         position: relative;
         min-height: 128px;
         padding: 0 10px;
+        z-index: -1;
         
         @include max-w(685px) {
             flex-direction: column;

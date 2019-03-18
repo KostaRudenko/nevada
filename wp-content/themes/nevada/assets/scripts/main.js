@@ -50,12 +50,17 @@
             $('body, html').removeClass('hide');
             $('.burger-menu').removeClass('open');
             $('.main-nav__list').removeClass('responsive');
+
+            $('.events__calendar').removeClass('responsive-calendar');
+            $('.btn--calendar-close').css('display', 'none');
+
         } 
 
         //styling contats block
         if (viewportWidth < 685) {
             $('.contacts__item--adress, .contacts__item--email').removeClass('separator--right');
             $('.contacts__item--adress, .contacts__item--email').addClass('separator--bottom');
+
         } else {
             $('.contacts__item--adress, .contacts__item--email').addClass('separator--right');
             $('.contacts__item--adress, .contacts__item--email').removeClass('separator--bottom');
@@ -85,6 +90,20 @@
                 $(this).parents().find('.contact-us-form__label').removeClass('contact-us-form__label--top');
             }
         }     
+    });
+
+
+    //responsive calendar open
+    $('.btn--calendar').on('click', function() {
+       $('.events__calendar').addClass('responsive-calendar');
+       $('.calendar-navigation').append('<button class="btn btn--calendar-close"><i class="fas fa-times fa-lg"></i></button>');
+       $('body, html').addClass('hide');
+       
+       //close calendar
+       $('.btn--calendar-close').on('click', function() {
+        $('.events__calendar').removeClass('responsive-calendar');
+        $('body, html').removeClass('hide');
+        });
     });
     
 })(jQuery);

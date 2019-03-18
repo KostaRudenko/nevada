@@ -1,0 +1,110 @@
+.events__calendar {
+
+    .widget_archives_calendar {
+        background: $fourth-color;
+    
+        h2 {
+            display: none;
+        }
+
+        .calendar-navigation {
+            height: 110px!important;
+            border-radius: 0;
+            background: $secondary-color;
+
+            .menu-container {
+                text-transform: uppercase;
+                font-size: 16px;
+            }
+        }
+        
+        .arrow-down {
+            display: none;
+        }
+
+        .calendar-archives.calendrier .day {
+            color: $tertiary-color-lignt;
+            font-size: 20px;
+            line-height: 12px;
+            
+        }
+        .calendar-archives.calendrier .day.has-posts a {
+            background: $secondary-color;
+        }
+
+        .calendar-archives.calendrier .day.weekday {
+            color: $secondary-color;
+            font-size: 16px;
+            line-height: 12px;
+        }
+
+        .calendar-archives.calendrier .week-row.weekdays {
+            padding: 20px;
+        }
+
+        .calendar-archives.calendrier .calendar-navigation>.prev-year,
+        .calendar-archives.calendrier .calendar-navigation>.next-year {
+            display: inline-block;
+            border: none;
+            box-shadow: none;
+            top: 43px;
+            z-index: 1;
+        }
+    
+        .calendar-archives.calendrier .calendar-navigation>.prev-year {
+            left: 53px;
+        }
+    
+        .calendar-archives.calendrier .calendar-navigation>.next-year {
+            right: 20px;
+        }
+    
+        .calendar-archives {
+            box-shadow: none;
+        }
+    
+        .calendar-archives.calendrier .day,
+        .calendar-archives.calendrier>.archives-years,
+        .calendar-archives.calendrier .week-row.weekdays {
+            border: none;
+            background: $fourth-color;
+        }
+
+        .calendar-archives>.archives-years>.year {
+            padding-bottom: 10px;
+            
+            .week-row {
+                padding: 0 20px;
+                margin-bottom: 5px;
+                font-family: $font-family--GaramondPremrPro;
+
+                &:nth-last-child(2) {
+                    display: none;
+                }
+            }
+ 
+        }
+    } 
+}
+
+.responsive-calendar {
+    position: fixed;
+    display: block!important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: inherit!important;
+    background: rgba(0, 0, 0, 0.5);
+
+    .widget_archives_calendar {
+        width: 100%;
+        max-width: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%, -50%)
+    }
+}
+
+
