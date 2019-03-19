@@ -1,5 +1,6 @@
 <div class="banner-wrapper">
     <div class="banner-wrapper 
+
 		<?php switch ($post->post_name) {
     		case 'home':
         	echo 'banner-wrapper--home';
@@ -16,7 +17,7 @@
 				default:
 					break;
 			};
-        ?>"
+    ?>"
 
 		<?php
 					
@@ -27,6 +28,6 @@
 				style="background-image: url(<?php echo $banner_image; ?>)"
 				
 			<?php endif;
-		?>
-			>
+
+		?>>	
 </div>

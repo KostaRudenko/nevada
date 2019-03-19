@@ -11,7 +11,7 @@
 
             <?php while ( have_posts() ) : the_post(); ?>
 
-                    <?php the_content(); ?>
+                <?php the_content(); ?>
                     
             <?php endwhile; ?>
 
@@ -43,28 +43,27 @@
                                 <p><?php echo the_sub_field('text'); ?></p>
                                 <footer class="public-article__footer">
 
-                                        <?php if( have_rows('link') ): 
+                                    <?php if( have_rows('link') ): 
 
-                                            while( have_rows('link') ): the_row(); 
+                                        while( have_rows('link') ): the_row(); 
+                                                                                   
+                                    ?>
 
-                                                $link = get_sub_field('link');                                                   
-                                        ?>
+                                    <?php 
 
-                                            <?php 
-
-                                                $link_url = get_sub_field('link_url');
-                                                $link_text = get_sub_field('link_text');
-                                                $link_icon = get_sub_field('link_icon');
+                                        $link_url = get_sub_field('link_url');
+                                        $link_text = get_sub_field('link_text');
+                                        $link_icon = get_sub_field('link_icon');
                                                         
-                                            if( $link_url ): ?>  
+                                        if( $link_url ): ?>  
                                                                 
-                                                <a class="btn" href="<?php echo $link_url; ?>"><span class="btn__icon"><i class="<?php echo $link_icon;?>"></i></span><?php echo $link_text; ?></a>
-
-                                            <?php endif; ?>
-                                                   
-                                        <?php endwhile; ?>
+                                            <a class="btn" href="<?php echo $link_url; ?>"><span class="btn__icon"><i class="<?php echo $link_icon;?>"></i></span><?php echo $link_text; ?></a>
 
                                         <?php endif; ?>
+                                                   
+                                    <?php endwhile; ?>
+
+                                    <?php endif; ?>
                                         
                                 </footer>
 

@@ -4,6 +4,7 @@
     $('.subscribe-email').on('focus', function () {
         $(this).parents().css('border-color', '#781241');
     });
+
     //subscribe form input on blur border-color set default
     $('.subscribe-email').on('blur', function () {
         $(this).parents().css('border-color', 'inherit');
@@ -20,6 +21,7 @@
     $('.contact-us-form__field').on('focus', function () {
         $(this).parent().parent().find('.contact-us-form__label').addClass('contact-us-form__label--top');
     });
+
     //label on blur
     $('.contact-us-form__field').on('blur', function () {
         let inputval = $(this).val();
@@ -51,22 +53,22 @@
             $('.burger-menu').removeClass('open');
             $('.main-nav__list').removeClass('responsive');
 
+            // closing calendar when landscape mode switched
             $('.events__calendar').removeClass('responsive-calendar');
             $('.btn--calendar-close').css('display', 'none');
 
         } 
 
-        //styling contats block
+        //styling contats block on resize
         if (viewportWidth < 685) {
             $('.contacts__item--adress, .contacts__item--email').removeClass('separator--right');
             $('.contacts__item--adress, .contacts__item--email').addClass('separator--bottom');
-
         } else {
             $('.contacts__item--adress, .contacts__item--email').addClass('separator--right');
             $('.contacts__item--adress, .contacts__item--email').removeClass('separator--bottom');
         }
 
-        //styling wine bottles
+        //styling wine bottles on resize
         if (viewportWidth < 650) {
             $('.bottle-card__photo-wrapper').removeClass('separator--right');
             $('.bottle-card').removeClass('border--bottom');
@@ -79,6 +81,7 @@
     $(".wpcf7").on('wpcf7:invalid', function() {
         $('.subscribe-form-content').css('border-color', '#f00');
     });
+
     //validation subscribe form success
     $(".wpcf7").on('wpcf7:mailsent', function() {
         $('.subscribe-form-content').css('border-color', '#398f14');
@@ -98,12 +101,12 @@
        $('.events__calendar').addClass('responsive-calendar');
        $('.calendar-navigation').append('<button class="btn btn--calendar-close"><i class="fas fa-times fa-lg"></i></button>');
        $('body, html').addClass('hide');
-       
-       //close calendar
-       $('.btn--calendar-close').on('click', function() {
+    });
+
+    //responsive calendar close
+    $('.btn--calendar-close').on('click', function() {
         $('.events__calendar').removeClass('responsive-calendar');
         $('body, html').removeClass('hide');
-        });
     });
     
 })(jQuery);

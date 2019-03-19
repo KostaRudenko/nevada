@@ -10,8 +10,7 @@
 				style="background-image: url(<?php echo $banner; ?>)"
 				
 			<?php endif;
-		?>
-			>
+		?>>
 </div>
 
 

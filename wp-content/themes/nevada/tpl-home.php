@@ -5,16 +5,22 @@
 ?>
 
 <?php get_header(); ?>
-        
+
         <div class='page-container'>
                 <div class='our-story'>
+
                         <?php while ( have_posts() ) : the_post(); ?>
+
                                 <?php the_content(); ?>
+
                         <?php endwhile; ?>
+
                 </div>
 
                 <?php if( have_rows('insta_photos') ): ?>
+
                         <ul class="insta-photo-list">
+
                                 <?php while( have_rows('insta_photos') ): the_row(); 
                                 
                                         $image = get_sub_field('image');
@@ -23,15 +29,19 @@
                                         <li class="insta-photo-list__item">
                                                 <img class='insta-photo-list__image' src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
                                         </li>
+
                                 <?php endwhile; ?>
                         </ul>
+
                 <?php endif; ?>
                 
                 <div class='subscribe-form-wrapper'>
+
                         <?php echo do_shortcode ('[contact-form-7 id="169" title="Email Subscribe form"]'); ?> 
                 </div>
 
                 <div class='meet-us' 
+                
                         <?php
                                 $bg_image = get_field('meet_us_bg');
 

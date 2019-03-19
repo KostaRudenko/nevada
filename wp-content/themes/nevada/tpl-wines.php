@@ -28,7 +28,6 @@
                         ?>
                         
                         <div class="bottle-card separator separator--bottom">
-
                             <div class="bottle-card__photo-wrapper separator separator--right">
 
                                 <?php if ($bottle_cap_icon) : ?>
@@ -78,6 +77,7 @@
         </section>
 
         <?php get_template_part( 'template-parts/contacts-info' ); ?>
+        
     </div>
 
 <?php get_footer(); ?>
