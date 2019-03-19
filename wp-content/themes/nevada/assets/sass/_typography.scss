@@ -57,10 +57,11 @@
     url("../fonts/Oswald-Regular.woff2") format("woff2");
 }
 
+
 //paragraphs
 p {
   font-family: $font-family--GaramondPremrPro;
-  color: $paragraph-color;
+  color: $tertiary-color;
   line-height: $paragraph-line-height;
 }
 

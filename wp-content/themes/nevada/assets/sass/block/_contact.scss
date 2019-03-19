@@ -15,7 +15,6 @@
         position: relative;
         min-height: 128px;
         padding: 0 10px;
-        z-index: -1;
         
         @include max-w(685px) {
             flex-direction: column;
@@ -44,6 +43,11 @@
             position: relative;
             padding: 30px 16px;
             width: 33%;
+
+            .social-list {
+                margin: 0;
+                padding: 0;
+            }
 
             @include max-w(685px) {
                 padding: 20px 16px;

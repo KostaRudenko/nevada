@@ -15,9 +15,7 @@ body {
   color: $text-color;
   font-family: $font-family;
   font-weight: $font-weight;
-  // font-size: $font-size;
   line-height: $line-height;
-
   overflow-x: hidden;
   
   @include fluid-font (14px, 20px, 320px, 2560px);
@@ -57,8 +55,12 @@ section {
 
 ul {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
+}
+
+ol {
+  font-family: $font-family--GaramondPremrPro;
+  color: $tertiary-color;
+  line-height: 30px;
 }
 
 p {
@@ -85,7 +87,6 @@ figure {
 // border styling
 .border {
   position: relative;
-  // overflow-x: hidden;
 
   &--top {
     border-top: 2px solid $tertiary-color;
@@ -158,8 +159,33 @@ figure {
   }
 }
 
+
+//hide scroll
 .hide {
   overflow: hidden;
-  // position: fixed;
   width: 100%;
+}
+
+
+blockquote {
+  position: relative;
+
+  &:before {
+    content: "\f10d";
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    position: absolute;
+    left: -25px;
+    color: $tertiary-color-lignt;
+  }
+  
+  &:after {
+    content: "\f10e";
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    position: absolute;
+    right: -20px;
+    bottom: -5px;
+    color: $tertiary-color-lignt;
+  }
 }

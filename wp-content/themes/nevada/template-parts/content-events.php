@@ -2,7 +2,7 @@
 <article class="public-article border border--top border--top-pseudo" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<h3 class="public-article__event-date">
-		<?php echo get_the_date('M j Y')?>
+		<?php the_field('date'); ?>
 	</h3> 
 
 	<?php the_title( '<h3 class="public-article__title">', '</h3>' ); ?>

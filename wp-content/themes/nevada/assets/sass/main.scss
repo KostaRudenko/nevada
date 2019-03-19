@@ -1,5 +1,7 @@
 //  Импорт файлов
 
+
+
 @import 'variables';
 @import 'functions';
 @import 'mixins';
@@ -31,3 +33,6 @@
 @import 'pages/media';
 @import 'pages/single-event';
 @import 'pages/contact';
+
+@import "../libs/font-awesome/scss/fontawesome.scss";
+@import "../libs/font-awesome/scss/solid.scss";
