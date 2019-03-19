@@ -31,4 +31,8 @@
     position: relative;
     min-height: 430px;
     background-position-x: center;
+
+    @include max-w($screen-xl) {
+        margin: 0 -10px;
+    }
 }
