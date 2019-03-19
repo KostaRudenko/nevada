@@ -66,12 +66,10 @@ p {
 }
 
 p, h3 {
-  //font-size: $paragraphs-font-size;
   @include fluid-font (14px, 20px, 320px, 2560px);
 }
 
 h4 {
-  // font-size: $font-size--h4;
   @include fluid-font (14px, 20px, 320px, 2560px);
   margin: 15px 0;
 }

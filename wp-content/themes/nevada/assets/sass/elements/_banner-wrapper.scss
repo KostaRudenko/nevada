@@ -15,12 +15,15 @@
         }
     }
 
-    &--404 {
+    &--404,
+    &--wine,
+    &--media,
+    &--events,
+    &--contact {
         min-height: 370px;
     }
 
     &--wine {
-        min-height: 370px;
         background-position: center 25%;
 
         @include max-w($screen-md) {
@@ -44,7 +47,6 @@
     }
 
     &--media {
-        min-height: 370px;
         background-position: center top;
 
         @include max-w($screen-md) {
@@ -68,7 +70,6 @@
     }
 
     &--events {
-        min-height: 370px;
         background-position: center top;
 
         @include max-w($screen-md) {
@@ -92,7 +93,6 @@
     }
 
     &--contact {
-        min-height: 370px;
         background-position: center top;
 
         @include max-w($screen-md) {
