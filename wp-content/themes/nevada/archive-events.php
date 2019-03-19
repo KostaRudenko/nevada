@@ -4,6 +4,7 @@
                 <h3 class="section-title-indent section-title-indent--bottom"><?php echo the_field('events_section_title', 'option'); ?></h3>
                 <div class="events__content-wrap">
                     <div class="events__event-wrap">
+
                         <?php if ( have_posts() ) : ?>
 
                             <?php while ( have_posts() ) : the_post(); ?>
@@ -19,6 +20,7 @@
                                 <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
                         <?php endif; ?>	
+                        
                     </div>
                     
                     <div class="events__calendar border border--top border--top-pseudo">
