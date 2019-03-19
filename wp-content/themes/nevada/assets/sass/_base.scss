@@ -170,22 +170,21 @@ figure {
 blockquote {
   position: relative;
 
-  &:before {
-    content: "\f10d";
+  &:before, &:after {
     font-family: "Font Awesome 5 Free";
     font-size: 12px;
     position: absolute;
+    color: $secondary-color;
+  }
+
+  &:before {
+    content: "\f10d";
     left: -25px;
-    color: $tertiary-color-lignt;
   }
   
   &:after {
     content: "\f10e";
-    font-family: "Font Awesome 5 Free";
-    font-size: 12px;
-    position: absolute;
     right: -20px;
     bottom: -5px;
-    color: $tertiary-color-lignt;
   }
 }
