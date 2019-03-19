@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" class="public-article public-article--single-event public-article border border--top border--top-pseudo" <?php post_class(); ?>>
 
-<h3 class="public-article__event-date"><?php the_field('date') ?></h3>
+    <h3 class="public-article__event-date"><?php the_field('date') ?></h3>
     <div class="events__content">
         <p>
             <?php the_content(); ?>
