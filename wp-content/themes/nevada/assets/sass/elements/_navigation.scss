@@ -1,5 +1,5 @@
 .main-nav__list {
-    
+
     padding-left: 0;
 
     @include max-w($screen-md) {
@@ -50,6 +50,19 @@
 
         a {
             color: $link-color--navigation;  
+        }
+
+        &:hover {
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background: $link-color--navigation-active;
+                bottom: -5px;
+                left: 0;
+            }
         }
     }
 
