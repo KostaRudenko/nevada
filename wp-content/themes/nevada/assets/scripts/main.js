@@ -104,10 +104,11 @@
     });
 
     //responsive calendar close
-    $('.btn--calendar-close').on('click', function() {
+    $('.calendar-navigation').on('click', '.btn--calendar-close', callback);
+    function callback() {
         $('.events__calendar').removeClass('responsive-calendar');
         $('body, html').removeClass('hide');
-    });
+    }
     
 })(jQuery);
 

@@ -18,6 +18,7 @@ function create_posttype()
     'menu_icon' => 'dashicons-format-aside',
     'rewrite' => array('slug' => 'events'),
     'has_archive' => true,
+    'publicly queryable' => true,
     )
   );
 }

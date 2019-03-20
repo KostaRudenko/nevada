@@ -1,6 +1,7 @@
 .insta-photo-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
 
@@ -13,9 +14,11 @@
     &__item {
         width: 100%;
         max-width: 367px;
+        max-height: 315px;
         overflow: hidden;
         margin-right: 10px;
         position: relative;
+        text-align: center;
 
         @include max-w(768px) {
             margin-right: 0;
@@ -25,5 +28,8 @@
         &:last-child {
             margin-right: 0;
         }
+    }
+    &__image {
+        height: 100%;
     }
 }
