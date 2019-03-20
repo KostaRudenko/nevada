@@ -1,4 +1,6 @@
 .main-nav__list {
+    
+    padding-left: 0;
 
     @include max-w($screen-md) {
         margin-left: -9999px;
